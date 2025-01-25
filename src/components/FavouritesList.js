@@ -1,12 +1,13 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import '../css/favouritesList.css'; // Make sure to import the CSS file
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import "../css/favouritesList.css";
 
 const FavoritesList = ({ favoriteRecipes, handleRemoveFromFavorites }) => {
-  const navigate = useNavigate(); // React Router's navigation function
+  const navigate = useNavigate();
 
   const handleImageClick = (recipeId) => {
-    navigate(`/recipe/${recipeId}`); // Navigate to the recipe details page
+    // To View the Full Details of the Recipe in Favourites
+    navigate(`/recipe/${recipeId}`);
   };
 
   return (
@@ -20,13 +21,20 @@ const FavoritesList = ({ favoriteRecipes, handleRemoveFromFavorites }) => {
                 src={recipe.image}
                 alt={recipe.name}
                 className="recipe-image"
-                onClick={() => handleImageClick(recipe.id)} // Handle image click
+                onClick={() => handleImageClick(recipe.id)}
               />
               <div className="recipe-card-body">
                 <h3>{recipe.name}</h3>
-                <p><strong>Meal Type:</strong> {recipe.mealType.join(', ')}</p>
-                <p><strong>Cuisine:</strong> {recipe.cuisine}</p>
-                <p><strong>Calories per Serving:</strong> {recipe.caloriesPerServing}</p>
+                <p>
+                  <strong>Meal Type:</strong> {recipe.mealType.join(", ")}
+                </p>
+                <p>
+                  <strong>Cuisine:</strong> {recipe.cuisine}
+                </p>
+                <p>
+                  <strong>Calories per Serving:</strong>{" "}
+                  {recipe.caloriesPerServing}
+                </p>
                 <button
                   className="remove-button"
                   onClick={() => handleRemoveFromFavorites(recipe)}

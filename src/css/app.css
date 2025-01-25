@@ -1,114 +1,107 @@
-/* App.css */
 .app-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
 .navbar {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
 }
 
 .navbar ul {
-    list-style-type: none;
-    display: flex;
-    gap: 2rem;
+  list-style-type: none;
+  display: flex;
+  gap: 2rem;
 }
 
 .navbar li {
-    font-size: 1.1rem;
+  font-size: 1.1rem;
 }
 
 .navbar a {
-    text-decoration: none;
-    color: #4A90E2;
-    /* Updated color: soft blue */
-    font-weight: 500;
+  text-decoration: none;
+  color: #4a90e2;
+
+  font-weight: 500;
 }
 
 .navbar a:hover {
-    color: #2C3E50;
-    /* Darker shade for hover effect */
+  color: #2c3e50;
 }
 
 .search-bar-container {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
 }
 
 .search-bar-container input,
 .search-bar-container select,
 .search-bar-container button {
-    padding: 0.75rem;
-    font-size: 1rem;
-    border-radius: 5px;
-    border: 1px solid #BDC3C7;
-    /* Light gray border for input elements */
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #bdc3c7;
 }
 
 .search-bar-container input,
 .search-bar-container select {
-    width: 250px;
+  width: 250px;
 }
 
 .search-bar-container button {
-    background-color: #4A90E2;
-    /* Soft blue background */
-    color: white;
-    border: none;
-    cursor: pointer;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  cursor: pointer;
 }
 
 .search-bar-container button:hover {
-    background-color: #2C3E50;
-    /* Darker blue on hover */
+  background-color: #2c3e50;
 }
 
 h1 {
-    text-align: center;
-    margin-bottom: 2rem;
-    font-family: 'Arial', sans-serif;
-    font-weight: 600;
-    color: #333333;
-    /* Darker color for the title */
+  text-align: center;
+  margin-bottom: 2rem;
+  font-family: "Arial", sans-serif;
+  font-weight: 600;
+  color: #333333;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
-    .navbar ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-    }
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
 
-    .search-bar-container {
-        flex-direction: column;
-        gap: 1rem;
-    }
+  .search-bar-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
 
-    .search-bar-container input,
-    .search-bar-container select,
-    .search-bar-container button {
-        width: 100%;
-    }
+  .search-bar-container input,
+  .search-bar-container select,
+  .search-bar-container button {
+    width: 100%;
+  }
 
-    .app-container {
-        padding: 1rem;
-    }
+  .app-container {
+    padding: 1rem;
+  }
 }
 
 @media (max-width: 480px) {
-    .navbar li {
-        font-size: 1rem;
-    }
+  .navbar li {
+    font-size: 1rem;
+  }
 
-    .search-bar-container input,
-    .search-bar-container select,
-    .search-bar-container button {
-        padding: 0.5rem;
-    }
+  .search-bar-container input,
+  .search-bar-container select,
+  .search-bar-container button {
+    padding: 0.5rem;
+  }
 }

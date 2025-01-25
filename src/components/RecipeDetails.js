@@ -2,11 +2,11 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import "../css/recipeDetails.css"
 const RecipeDetails = ({ recipes }) => {
-  const { id } = useParams(); // Extract the recipe ID from the route parameter
-  const recipe = recipes.find((r) => r.id === parseInt(id)); // Find the recipe by ID
+  const { id } = useParams(); 
+  const recipe = recipes.find((r) => r.id === parseInt(id)); //Finding the Recipe With Params
 
   if (!recipe) {
-    return <p>Recipe not found.</p>; // Handle case where recipe doesn't exist
+    return <p>Recipe not found.</p>; 
   }
 
   return (

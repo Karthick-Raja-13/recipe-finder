@@ -1,6 +1,6 @@
-import { combineReducers } from 'redux';
-import recipesReducer from "./recipeSlice"
-import favoritesReducer from './favouriteSlice';
+import { combineReducers } from "redux";
+import recipesReducer from "./recipeSlice";
+import favoritesReducer from "./favouriteSlice";
 
 const rootReducer = combineReducers({
   recipes: recipesReducer,

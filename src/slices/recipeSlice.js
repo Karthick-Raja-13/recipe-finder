@@ -1,9 +1,6 @@
-// src/redux/recipeSlice.js
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import axios from "axios";
 
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
-
-// Define an initial state with loading and error handling
 const initialState = {
   allRecipes: [],
   filteredRecipes: [],
@@ -11,17 +8,15 @@ const initialState = {
   error: null,
 };
 
-// Async thunk to fetch recipes (assuming API response matches the new structure)
 export const fetchRecipes = createAsyncThunk(
-  'recipes/fetchRecipes',
-  async (searchTerm, { rejectWithValue }) => {
+  "recipes/fetchRecipes",
+  async ({ rejectWithValue }) => {
     const url = `https://dummyjson.com/recipes`;
 
     try {
       const response = await axios.get(url);
       console.log(response.data);
-      
-      // Map the data to match the expected structure
+
       return response.data.recipes.map((hit) => ({
         id: hit.id,
         name: hit.name,
@@ -47,20 +42,29 @@ export const fetchRecipes = createAsyncThunk(
 );
 
 const recipeSlice = createSlice({
-  name: 'recipes',
+  name: "recipes",
   initialState,
   reducers: {
     filterRecipes: (state, action) => {
       const { category, searchTerm, difficulty, cuisine } = action.payload;
       state.filteredRecipes = state.allRecipes.filter((recipe) => {
-        const matchesCategory = category ? recipe.mealType.includes(category) : true;
+        const matchesCategory = category
+          ? recipe.mealType.includes(category)
+          : true;
         const matchesSearchTerm = searchTerm
           ? recipe.name.toLowerCase().includes(searchTerm.toLowerCase())
           : true;
-        const matchesDifficulty = difficulty ? recipe.difficulty === difficulty : true;
+        const matchesDifficulty = difficulty
+          ? recipe.difficulty === difficulty
+          : true;
         const matchesCuisine = cuisine ? recipe.cuisine === cuisine : true;
 
-        return matchesCategory && matchesSearchTerm && matchesDifficulty && matchesCuisine;
+        return (
+          matchesCategory &&
+          matchesSearchTerm &&
+          matchesDifficulty &&
+          matchesCuisine
+        );
       });
     },
   },

@@ -1,143 +1,120 @@
-/* Recipe List Container */
 .recipe-list-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
-/* Recipe Card */
 .recipe-card {
-    background-color: #ffffff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    overflow: hidden;
-    margin-bottom: 2rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .recipe-card:hover {
-    transform: translateY(-5px);
-    /* Slight hover effect */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Recipe Card Image */
 .recipe-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-bottom: 3px solid #007bff;
-    /* Blue border under the image for a modern touch */
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 3px solid #007bff;
 }
 
-/* Recipe Card Body */
 .recipe-card-body {
-    padding: 1.5rem;
+  padding: 1.5rem;
 }
 
-/* Recipe Title */
 .recipe-card h3 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.5rem;
 }
 
-/* Recipe Description */
 .recipe-card p {
-    margin: 0.5rem 0;
-    color: #666;
+  margin: 0.5rem 0;
+  color: #666;
 }
 
-/* Recipe Ingredients List */
 .recipe-card ul {
-    padding-left: 1.5rem;
-    color: #444;
+  padding-left: 1.5rem;
+  color: #444;
 }
 
-/* Remove Button */
 .remove-button {
-    background-color: #f44336;
-    /* Red for remove */
-    color: white;
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 1rem;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+  background-color: #f44336;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .remove-button:hover {
-    background-color: #d32f2f;
-    transform: scale(1.05);
-    /* Slight scale on hover for emphasis */
+  background-color: #d32f2f;
+  transform: scale(1.05);
 }
 
-/* Recipe Grid Layout */
 .recipe-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
 }
 
-/* Media Query for Medium Screens (1200px) */
 @media (max-width: 1200px) {
-    .recipe-grid {
-        grid-template-columns: repeat(2, 1fr);
-        /* 2 items per row on medium screens */
-    }
+  .recipe-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-/* Media Query for Smaller Screens (768px) */
 @media (max-width: 768px) {
-    .recipe-grid {
-        grid-template-columns: 1fr;
-        /* 1 item per row on smaller screens */
-    }
+  .recipe-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
-/* No Recipes Available Message */
 .no-recipes {
-    text-align: center;
-    font-size: 1.2rem;
-    color: #777;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #777;
 }
 
-/* Pagination Container */
 .pagination-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }
-
-/* Pagination Button */
 .pagination-button {
-    padding: 10px 20px;
-    margin: 0 10px;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+  padding: 10px 20px;
+  margin: 0 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .pagination-button:hover {
-    background-color: #007bff;
-    /* Blue hover for pagination */
-    color: white;
-    transform: scale(1.05);
+  background-color: #007bff;
+  color: white;
+  transform: scale(1.05);
 }
 
 .pagination-button:disabled {
-    background-color: #ddd;
-    cursor: not-allowed;
+  background-color: #ddd;
+  cursor: not-allowed;
 }
 
-/* Page Info (pagination) */
 .page-info {
-    font-size: 16px;
-    margin: 0 10px;
+  font-size: 16px;
+  margin: 0 10px;
 }

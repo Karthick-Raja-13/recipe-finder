@@ -4,11 +4,7 @@ import '../css/recipe.css'; // Import the CSS file
 const RecipeList = ({ recipes, handleAddToFavorites, favoriteRecipes }) => {
   const recipesPerPage = 5;
   const [currentPage, setCurrentPage] = useState(1);
-
-  // Calculate the total number of pages
   const totalPages = Math.ceil(recipes.length / recipesPerPage);
-
-  // Get the recipes for the current page
   const startIndex = (currentPage - 1) * recipesPerPage;
   const currentRecipes = recipes.slice(startIndex, startIndex + recipesPerPage);
 
@@ -17,7 +13,6 @@ const RecipeList = ({ recipes, handleAddToFavorites, favoriteRecipes }) => {
       setCurrentPage(currentPage + 1);
     }
   };
-
   const handlePrevPage = () => {
     if (currentPage > 1) {
       setCurrentPage(currentPage - 1);
@@ -61,8 +56,6 @@ const RecipeList = ({ recipes, handleAddToFavorites, favoriteRecipes }) => {
               </div>
             ))}
           </div>
-
-          {/* Pagination Controls */}
           <div className="pagination-container">
             <button
               className="pagination-button"

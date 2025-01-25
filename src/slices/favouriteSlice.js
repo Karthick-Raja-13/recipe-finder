@@ -1,24 +1,24 @@
-// src/redux/favoritesSlice.js
-
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  favoriteRecipes: [], // Store favorite recipes
+  favoriteRecipes: [],
 };
 
 const favoritesSlice = createSlice({
-  name: 'favorites',
+  name: "favorites",
   initialState,
   reducers: {
     addToFavorites: (state, action) => {
-      // Check if the recipe is already in the favorites list
-      if (!state.favoriteRecipes.some(recipe => recipe.id === action.payload.id)) {
+      if (
+        !state.favoriteRecipes.some((recipe) => recipe.id === action.payload.id)
+      ) {
         state.favoriteRecipes.push(action.payload);
       }
     },
     removeFromFavorites: (state, action) => {
-      // Remove the recipe from the favorites list by matching its unique id
-      state.favoriteRecipes = state.favoriteRecipes.filter(recipe => recipe.id !== action.payload.id);
+      state.favoriteRecipes = state.favoriteRecipes.filter(
+        (recipe) => recipe.id !== action.payload.id
+      );
     },
   },
 });
